@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+        onload="this.rel='stylesheet'" rel="stylesheet" />
+    <title>Viajes Express</title>
+    <link rel="icon" type="image/x-icon" href="./icon.png">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        display: ["Plus Jakarta Sans"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "1rem",
+                        xl: "1.5rem",
+                        full: "9999px"
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <main class="flex-1">
+                <!-- <div class="relative w-full h-screen">
+                    <div class="absolute inset-0 bg-cover bg-center"
+                        style='background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAEGivRiCEbSMOK0h9gYOniGFTY2TE6XNaLzJ8FNmDgF_B25wc6TZhjS9pL0cUqQLWTr4vILBsy4wTGP9Yxki_oq-lgcstpFZC-N0DzcJUwXDoGU-Jc3i3H9ao1_wXllQvxnlPMcs0Q5Af2arHzv3pzaP5zSlPkqYTTORqBZ2Ur8jCCqcHsJPEo6VDKChVg_uTwXJeKQPcn1wvKh5efJrngStB58P-4tMjUE6SsxK_hY5EuPHdnbTNL8Bck0o3kEKXxcIh2lH8P13E");'>
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
+                        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">Descubramos el mundo</h1>
+                        <p class="text-lg md:text-xl max-w-2xl mb-8">Viajes inolvidables a precios increíbles. Tu
+                            próxima aventura te espera.</p>
+                        <a class="inline-block bg-primary text-white font-bold text-lg px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+                            href="#">
+                            Ir a la página principal
+                        </a>
+                    </div>
+                </div> -->
+                <div class="relative w-full h-screen overflow-hidden">
+                    <!-- Slides -->
+                    <div id="carousel" class="absolute inset-0 transition-all duration-1000 ease-in-out">
+                        <!-- Slide 1 -->
+                        <div class="absolute inset-0 bg-cover bg-center slide opacity-100 transition-opacity duration-1000"
+                            style='background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAEGivRiCEbSMOK0h9gYOniGFTY2TE6XNaLzJ8FNmDgF_B25wc6TZhjS9pL0cUqQLWTr4vILBsy4wTGP9Yxki_oq-lgcstpFZC-N0DzcJUwXDoGU-Jc3i3H9ao1_wXllQvxnlPMcs0Q5Af2arHzv3pzaP5zSlPkqYTTORqBZ2Ur8jCCqcHsJPEo6VDKChVg_uTwXJeKQPcn1wvKh5efJrngStB58P-4tMjUE6SsxK_hY5EuPHdnbTNL8Bck0o3kEKXxcIh2lH8P13E");'>
+                            <div
+                                class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
+                                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">Descubramos el mundo
+                                </h1>
+                                <p class="text-lg md:text-xl max-w-2xl mb-8">
+                                    Viajes inolvidables a precios increíbles. Tu próxima aventura te espera.
+                                </p>
+                                <a class="inline-block bg-primary text-white font-bold text-lg px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+                                    href="https://travel-agencyweb.co?whitelabelid=andiamo-viajes-y-turismo-sas">
+                                    Viaja con Nosotros
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="absolute inset-0 bg-cover bg-center slide opacity-0 transition-opacity duration-1000"
+                            style='background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80");'>
+                            <div
+                                class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
+                                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">Explora playas
+                                    paradisíacas</h1>
+                                <p class="text-lg md:text-xl max-w-2xl mb-8">
+                                    Relájate bajo el sol y descubre los rincones más hermosos del planeta.
+                                </p>
+                                <a class="inline-block bg-primary text-white font-bold text-lg px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+                                    href="https://travel-agencyweb.co?whitelabelid=andiamo-viajes-y-turismo-sas">
+                                    Ir a la página principal
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="absolute inset-0 bg-cover bg-center slide opacity-0 transition-opacity duration-1000"
+                            style='background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=1600&q=80");'>
+                            <div
+                                class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
+                                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">Aventura en cada
+                                    destino</h1>
+                                <p class="text-lg md:text-xl max-w-2xl mb-8">
+                                    Desde montañas hasta ciudades, vive experiencias únicas e inolvidables.
+                                </p>
+                                <a class="inline-block bg-primary text-white font-bold text-lg px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+                                    href="https://travel-agencyweb.co?whitelabelid=andiamo-viajes-y-turismo-sas">
+                                    Ir a la página principal
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const slides = document.querySelectorAll('.slide');
+                    let index = 0;
+
+                    setInterval(() => {
+                        slides[index].classList.remove('opacity-100');
+                        slides[index].classList.add('opacity-0');
+                        index = (index + 1) % slides.length;
+                        slides[index].classList.remove('opacity-0');
+                        slides[index].classList.add('opacity-100');
+                    }, 3000); // Cambia cada 5 segundos
+                </script>
+                <div class="px-4 md:px-10 lg:px-20 xl:px-40 py-10">
+                    <div class="layout-content-container flex flex-col w-full max-w-5xl mx-auto">
+                        <section class="py-12">
+                            <h2 class="text-2xl font-bold text-black dark:text-white px-4 mb-6">Historias de Éxito</h2>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+                                <div class="flex flex-col gap-4 rounded-lg">
+                                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDl0oWdwxbN9P9Zz4rareVwoFgip78eoEMyx6-8wW2wq0s6LGaj3kLh6p08PTogoGYQ_-m1L-xukOLTfmYqqmbxIlItkz1jX-gwiyEAtC1TDJHA8sHY5A9mUURsSa70Gtyp2ACWjmuHkMX4pavvt2GPQ91xDmN0ubiyLoIWVbIzJFUGmLtCdk3m6W_asbR-FQaFQo2shJRzLwdfOdvm4wJPAN5UqZO2QRI5NYH7pf7nTra_K8PqtSotNiEm4WkAmrV0qZCWflq2BE8");'>
+                                    </div>
+                                    <div>
+                                        <p class="text-black dark:text-white font-semibold">Escapada romántica en el
+                                            Caribe</p>
+                                        <p class="text-black/60 dark:text-white/60 text-sm">Una semana de ensueño en una
+                                            isla paradisíaca, disfrutando de playas de arena blanca y atardeceres
+                                            inolvidables.</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-4 rounded-lg">
+                                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDFpCPu2gfJo1Bsrf-NNyqKSF45FF0TUYjECIChiDeCPbxCMyLDrT43Gmx2TjMViPybFgADAcwoFp0uefe6ngYJFwobphPSVUZhIRzTi6QZKlX0mw6R_c3UE95OKFFsfUdFXkQRc_YuPwRDyrERJh8UgcO9kBCA9YGLp_O8GWyerwYP0xLSADy1PthA05UeMFe77qlDTEr9VNOD52An7tm3Av_LceuSxCcWJJy9jdFSlFn75b00IjzDSn5zDhXvtUZq9dWshqEMePE");'>
+                                    </div>
+                                    <div>
+                                        <p class="text-black dark:text-white font-semibold">Aventura familiar en los
+                                            Alpes</p>
+                                        <p class="text-black/60 dark:text-white/60 text-sm">Explorando la naturaleza y
+                                            creando recuerdos duraderos con actividades para todas las edades.</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-4 rounded-lg">
+                                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAhjfgShPLgbQ1eYJLz87c7EYfaZkZzVWKo5dW-BrGxcwpiZv41CaH1x6xKaYYubGVYQ2cPKe7ZGTFUkJ69Lst0wG-6Sg9y15qbu0Lx8yBM-0DQs0U_xNTijULLYRQ5Fjmo3UrV5oxNHhZrEjYEvA-dGvGGhS6MbmcwD-1Y_TZxU9mYKw6Gv6fps_kco-e39m8-ERXgyQYa50wvUBs51fra8WerDGlIs8pIUp8RsSQTaEGW0S--pBKOfSHP-wMtWofBWZgsfShepOw");'>
+                                    </div>
+                                    <div>
+                                        <p class="text-black dark:text-white font-semibold">Festival de música en la
+                                            ciudad</p>
+                                        <p class="text-black/60 dark:text-white/60 text-sm">Viviendo la energía de un
+                                            festival internacional, con música en vivo y experiencias culturales.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="py-12">
+                            <h2 class="text-2xl font-bold text-black dark:text-white px-4 mb-6">Testimonios</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                                <div
+                                    class="flex flex-col gap-4 p-6 rounded-lg bg-background-light dark:bg-background-dark border border-black/10 dark:border-white/10">
+                                    <div class="flex items-center gap-3">
+                                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDLqNuylllv-Z3vJZUH36yoOqys_Dm2DndOElASeLsvZh8pKrm2MJMmBQDIjQ6of0SjeeQ31qOqL_BWlChCO_ky4piNrqJw7vSe5-NCTV_PJlknr9vqTf7iqvUQA1Q_Cj5nNglGjLF97-EWRZKjOKRg_5epJxti3_92S8LrYYTFHJNwkrz3wVrM41eDdix3jeQZibyyNwZt86vE0qss7RepaFNrrMPJ6k90sg2rdD73iYMaq7es7SDJri46D0_Vfa0QQMOZMYt1fS8");'>
+                                        </div>
+                                        <div class="flex-1">
+                                            <p class="text-black dark:text-white font-semibold">Sofía Rodríguez</p>
+                                            <p class="text-black/60 dark:text-white/60 text-sm">Hace 2 meses</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-0.5 text-primary">
+                                        <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                                            </path>
+                                        </svg>
+                                        <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                                            </path>
+                                        </svg>
+                                        <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                                            </path>
+                                        </svg>
+                                        <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                                            </path>
+                                        </svg>
+                                        <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <p class="text-black/80 dark:text-white/80">"Viajes Express hizo que mi viaje a las
+                                        Maldivas fuera perfecto. La atención al detalle y el servicio personalizado
+                                        superaron mis expectativas."</p>
+                                </div>
+                                <div
+                                    class="flex flex-col gap-4 p-6 rounded-lg bg-background-light dark:bg-background-dark border border-black/10 dark:border-white/10">
+                                    <div class="flex items-center gap-3">
+                                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCiYaw9Zkl-NU1lp-VVL7zwDtQBmY79iALOdaMWSgOopbLyWCzgUtP4QenA5_cog6QOOTg1Rho7vxBNF56eSKk-Nonh_NiNrjPY34hCH6hk7n7AoSzPevP-qEqwIcSD8IzO3lONJLQJK0isNJvF0csX3umj_xY_XMzNbcSlbntCIcdta09RB_skUtAcPx53MoSu_aZkpwhqCSS4Yjvdg8lpe8ClK2gWKVUMq8buu3y9o3rSUK7RiQhMopM9d6ioSVhL6QNo__aPMs4");'>
+                                        </div>
+                                        <div class="flex-1">
+                                            <p class="text-black dark:text-white font-semibold">Carlos López</p>
+                                            <p class="text-black/60 dark:text-white/60 text-sm">Hace 4 meses</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-0.5 text-primary">
+                                        <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                                            </path>
+                                        </svg>
+                                        <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                                            </path>
+                                        </svg>
+                                        <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                                            </path>
+                                        </svg>
+                                        <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                                            </path>
+                                        </svg>
+                                        <svg class="text-black/20 dark:text-white/20" fill="currentColor" height="20"
+                                            viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M239.2,97.29a16,16,0,0,0-13.81-11L166,81.17,142.72,25.81h0a15.95,15.95,0,0,0-29.44,0L90.07,81.17,30.61,86.32a16,16,0,0,0-9.11,28.06L66.61,153.8,53.09,212.34a16,16,0,0,0,23.84,17.34l51-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.51-58.6,45.1-39.36A16,16,0,0,0,239.2,97.29Zm-15.22,5-45.1,39.36a16,16,0,0,0-5.08,15.71L187.35,216v0l-51.07-31a15.9,15.9,0,0,0-16.54,0l-51,31h0L82.2,157.4a16,16,0,0,0-5.08-15.71L32,102.35a.37.37,0,0,1,0-.09l59.44-5.14a16,16,0,0,0,13.35-9.75L128,32.08l23.2,55.29a16,16,0,0,0,13.35,9.75L224,102.26S224,102.32,224,102.33Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <p class="text-black/80 dark:text-white/80">"Organizaron nuestras vacaciones
+                                        familiares en los Alpes de manera impecable. Todo salió según lo planeado y
+                                        disfrutamos cada momento."</p>
+                                </div>
+                                <div
+                                    class="flex flex-col gap-4 p-6 rounded-lg bg-background-light dark:bg-background-dark border border-black/10 dark:border-white/10">
+                                    <div class="flex items-center gap-3">
+                                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-3X9IZTFayZTpSokqHXRUbG8IgHk-fdhyoycC4uyBiKmhY6K0NP_7Eg56zRwMw3DXXPa_0YJ36pAbAMJaYIqrvGGEuGXcCa_C4kRfYD8t_4cBu15pazsq7x0aJ9I3nAw8FPQWL_rirjf4uA3x9EHgNuHkSUF1upbrVgHIf78quPcwZz7NEG2ftNgJLAG4dW9ejMzMK7Qnp3ertJFayUTrHLMMMKdAAoPnlO1qQV2nLbMc1fESf5EpJf5N8RznOge9rxwYHmPDdyg");'>
+                                        </div>
+                                        <div class="flex-1">
+                                            <p class="text-black dark:text-white font-semibold">Ana Martínez</p>
+                                            <p class="text-black/60 dark:text-white/60 text-sm">Hace 6 meses</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-0.5 text-primary">
+                                        <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                                            </path>
+                                        </svg>
+                                        <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                                            </path>
+                                        </svg>
+                                        <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                                            </path>
+                                        </svg>
+                                        <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                                            </path>
+                                        </svg>
+                                        <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <p class="text-black/80 dark:text-white/80">"El festival de música fue una
+                                        experiencia única. Gracias a Viajes Express por hacer posible este viaje
+                                        increíble."</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="py-12">                            
+                                <div class="max-w-6xl mx-auto px-6 text-center">
+                                    <!-- Título -->
+                                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Síguenos en Instagram</h2>
+                                    <p class="text-gray-600 mb-10">Descubre nuestras últimas aventuras y destinos
+                                        soñados</p>
+
+                                    <!-- Galería -->
+                                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                                        <!-- Imagen 1 -->
+                                        <a href="#" target="_blank"
+                                            class="group relative overflow-hidden rounded-xl shadow-lg">
+                                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+                                                alt="Instagram 1"
+                                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                            <div
+                                                class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center text-white font-bold">
+                                                <span>@tu_cuenta</span>
+                                            </div>
+                                        </a>
+
+                                        <!-- Imagen 2 -->
+                                        <a href="#" target="_blank"
+                                            class="group relative overflow-hidden rounded-xl shadow-lg">
+                                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                                                alt="Instagram 2"
+                                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                            <div
+                                                class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center text-white font-bold">
+                                                <span>@tu_cuenta</span>
+                                            </div>
+                                        </a>
+
+                                        <!-- Imagen 3 -->
+                                        <a href="#" target="_blank"
+                                            class="group relative overflow-hidden rounded-xl shadow-lg">
+                                            <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=800&q=80"
+                                                alt="Instagram 3"
+                                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                            <div
+                                                class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center text-white font-bold">
+                                                <span>@tu_cuenta</span>
+                                            </div>
+                                        </a>
+
+                                        <!-- Imagen 4 -->
+                                        <a href="#" target="_blank"
+                                            class="group relative overflow-hidden rounded-xl shadow-lg">
+                                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80"
+                                                alt="Instagram 4"
+                                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                            <div
+                                                class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center text-white font-bold">
+                                                <span>@tu_cuenta</span>
+                                            </div>
+                                        </a>
+
+                                        <!-- Imagen 5 -->
+                                        <a href="#" target="_blank"
+                                            class="group relative overflow-hidden rounded-xl shadow-lg">
+                                            <img src="https://images.unsplash.com/photo-1473625247510-8ceb1760943f?auto=format&fit=crop&w=800&q=80"
+                                                alt="Instagram 5"
+                                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                            <div
+                                                class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center text-white font-bold">
+                                                <span>@tu_cuenta</span>
+                                            </div>
+                                        </a>
+
+                                        <!-- Imagen 6 -->
+                                        <a href="#" target="_blank"
+                                            class="group relative overflow-hidden rounded-xl shadow-lg">
+                                            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80"
+                                                alt="Instagram 6"
+                                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                            <div
+                                                class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center text-white font-bold">
+                                                <span>@tu_cuenta</span>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <!-- Botón -->
+                                    <div class="mt-10">
+                                        <a class="inline-block bg-primary text-white font-bold text-lg px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+                                            href="https://www.instagram.com/andiamovyt/">
+                                            Ver más en Instagram
+                                        </a>
+                                    </div>
+                                </div>                            
+
+                        </section>
+                    </div>
+                </div>
+            </main>
+            <footer class="flex justify-center border-t border-black/10 dark:border-white/10 mt-10">
+                <div class="flex max-w-5xl flex-1 flex-col py-10 px-4">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div class="flex flex-wrap justify-center gap-6">
+                            <a class="text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors"
+                                href="#">Contacto</a>
+                        </div>
+                        <div class="flex justify-center gap-4">
+                            <a class="text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary transition-colors"
+                                href="#">
+                                <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a class="text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary transition-colors"
+                                href="https://www.instagram.com/andiamovyt/">
+                                <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a class="text-black/60 dark:text-white/60 hover:text-primary dark:hover:text-primary transition-colors"
+                                href="https://www.facebook.com/viajesyturismoAndiamo">
+                                <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-black/60 dark:text-white/60 text-sm text-center mt-8">© 2025 Andiamo Viajes y
+                        Turismo. Todos
+                        los derechos reservados.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <a href="https://wa.me/521234567890" target="_blank"
+        class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full p-3 shadow-lg transition-all duration-300 flex items-center justify-center">
+        <!-- Ícono de WhatsApp (SVG) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="w-10 h-10">
+            <path
+                d="M16.001 3.001a12.94 12.94 0 0 0-9.19 3.81A12.94 12.94 0 0 0 3 16.002c0 2.263.586 4.47 1.697 6.419L3 29l6.733-1.675A12.97 12.97 0 0 0 16.001 29a12.94 12.94 0 0 0 9.19-3.81A12.94 12.94 0 0 0 29 16.002a12.94 12.94 0 0 0-3.81-9.19A12.94 12.94 0 0 0 16.001 3.001zm0 23.792a10.8 10.8 0 0 1-5.513-1.508l-.395-.233-3.993 1.004 1.064-3.89-.255-.4A10.83 10.83 0 0 1 5.17 16.002c0-5.978 4.853-10.832 10.831-10.832 2.893 0 5.612 1.128 7.659 3.176a10.8 10.8 0 0 1 3.176 7.656c0 5.978-4.853 10.791-10.835 10.791zm5.91-8.13c-.323-.163-1.91-.94-2.206-1.05-.296-.108-.512-.162-.728.163s-.837 1.05-1.027 1.267c-.188.215-.376.243-.698.081-.323-.162-1.364-.504-2.597-1.61-.96-.853-1.61-1.91-1.797-2.233-.188-.323-.02-.497.142-.66.146-.145.323-.377.485-.565.163-.188.215-.323.323-.539.108-.216.054-.405-.027-.567-.081-.162-.728-1.755-.998-2.407-.263-.63-.53-.544-.728-.554l-.621-.011c-.215 0-.565.081-.86.405-.296.323-1.13 1.104-1.13 2.693 0 1.588 1.158 3.125 1.322 3.341.162.215 2.283 3.488 5.53 4.886.773.334 1.376.533 1.845.682.775.247 1.481.212 2.038.129.622-.093 1.91-.782 2.183-1.538.27-.754.27-1.4.189-1.538-.081-.136-.296-.216-.62-.38z" />
+        </svg>
+    </a>
+</body>
+
+</html>
